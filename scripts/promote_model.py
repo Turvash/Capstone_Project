@@ -23,9 +23,9 @@ def promote_model():
     model_name = "my_model"
 
     # Get the latest version in "Staged"
-    staged_versions = client.get_latest_versions(model_name, stages=["Staged"])
+    staged_versions = client.get_latest_versions(model_name, stages=["Staging"])
     if not staged_versions:
-        print(f"No model found in 'Staged' stage for '{model_name}'.")
+        print(f"No model found in 'Staging' stage for '{model_name}'.")
         return
     latest_version_staged = staged_versions[0].version
 
